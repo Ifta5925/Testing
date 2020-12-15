@@ -1,4 +1,4 @@
-from tests.acceptance.locators.home_page import HomePageLocators
+from tests.acceptance.locators.base_page import BasePageLocators
 
 
 class BasePage:
@@ -9,7 +9,6 @@ class BasePage:
     def url(self):
         return 'http://127.0.0.1.5000'
 
-
     @property
     def title(self):
-        return self.driver.find_element(*HomePageLocators.TITLE)
+        return self.driver.find_element(*BasePageLocators.TITLE)
