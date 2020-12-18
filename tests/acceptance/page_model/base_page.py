@@ -7,8 +7,12 @@ class BasePage:
 
     @property
     def url(self):
-        return 'http://127.0.0.1.5000'
+        return 'http://127.0.0.1:5000'
 
     @property
     def title(self):
         return self.driver.find_element(*BasePageLocators.TITLE)
+    
+    @property
+    def navigation(self):
+        return self.driver.find_element(*BasePageLocators.NAV_LINKS)
