@@ -8,7 +8,7 @@ class BlogPage(BasePage):
         return super(BlogPage, self).url + '/blog'
 
     @property
-    def post_section(self):
+    def posts_section(self):
         return self.driver.find_element(*BlogPageLocators.POSTS_SECTION)
 
     @property
